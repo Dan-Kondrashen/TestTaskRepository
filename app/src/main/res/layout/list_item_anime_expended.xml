@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space4"
+        android:background="?colorPrimaryDark"
+        android:backgroundTint="?colorPrimary"
+        app:cardCornerRadius="@dimen/space28"
+        app:layout_constraintHeight_max="@dimen/space520"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="4dp">
+
+        <ImageView
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/anim" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:alpha="0.8"
+                android:layout_marginTop="@dimen/space100"
+                android:background="?colorPrimaryLight"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/text_24sp_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:paddingStart="@dimen/space8"
+                    android:paddingEnd="@dimen/space8"
+                    android:textColor="?colorPrimaryUltraDark"
+                    android:textStyle="bold"
+                    tools:text="Наименование" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/seasonText"
+                        style="@style/text_20sp_style"
+                        android:textStyle="bold"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="4"
+                        android:paddingStart="@dimen/space8"
+                        android:paddingEnd="@dimen/space8"
+                        android:textColor="?colorPrimaryUltraDark"
+                        android:text="@string/seasonText" />
+                    <TextView
+                        android:id="@+id/seasonInfo"
+                        style="@style/text_20sp_style"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="4"
+                        android:paddingStart="@dimen/space8"
+                        android:paddingEnd="@dimen/space8"
+                        android:textColor="?colorPrimaryUltraDark"
+                        tools:text="Зима ()" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/dateAddText"
+                        style="@style/text_20sp_style"
+                        android:textStyle="bold"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="4"
+                        android:paddingStart="@dimen/space8"
+                        android:paddingEnd="@dimen/space8"
+                        android:textColor="?colorPrimaryUltraDark"
+                        android:text="@string/dateAdding" />
+                    <TextView
+                        android:id="@+id/dateAddInfo"
+                        style="@style/text_20sp_style"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:minLines="1"
+                        android:maxLines="4"
+                        android:paddingStart="@dimen/space8"
+                        android:paddingEnd="@dimen/space8"
+                        android:textColor="?colorPrimaryUltraDark"
+                        tools:text="12.12.2021" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/descriptionText"
+                    style="@style/text_20sp_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:textStyle="bold"
+                    android:paddingStart="@dimen/space8"
+                    android:paddingEnd="@dimen/space8"
+                    android:text="@string/description"/>
+                <TextView
+                    android:id="@+id/shortDescription"
+                    style="@style/text_20sp_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space12"
+                    android:ellipsize="end"
+                    android:maxLines="5"
+                    android:paddingStart="@dimen/space8"
+                    android:paddingEnd="@dimen/space8"
+                    android:textColor="?colorPrimaryUltraDark"
+                    tools:text="unsuvdsdvdusubbhbhsbhusbuhbduhbuhbdfdbhububduhbduhbduhdbuhdbuhdbuh" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="@dimen/space72"
+                android:layout_height="@dimen/space72"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/space8">
+
+                <ProgressBar
+                    android:id="@+id/popularityIndicator"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progress_custom" />
+
+                <TextView
+                    android:id="@+id/score"
+                    style="@style/text_20sp_style"
+                    android:layout_width="@dimen/space52"
+                    android:alpha="0.80"
+                    android:layout_height="@dimen/space52"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/text_circle_back"
+                    android:gravity="center"
+                    android:maxLength="5"
+                    android:maxLines="1"
+                    android:padding="@dimen/space4"
+                    android:textAlignment="center"
+                    tools:text="9.44" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="@dimen/space72"
+                style="@style/text_16sp_style"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-5dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/space12"
+                android:layout_toStartOf="@+id/relativeLayout"
+                android:alpha="0.80"
+                android:background="@drawable/corner_transporent_status"
+                android:gravity="center"
+                android:maxWidth="@dimen/space52"
+                android:maxLines="2"
+                android:minLines="2"
+                android:paddingStart="@dimen/space4"
+                android:paddingTop="@dimen/space8"
+                android:paddingEnd="@dimen/space4"
+
+                tools:text="OVA" />
+
+            <TextView
+                android:id="@+id/deleteBack"
+                style="@style/text_16sp_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/space12"
+                android:layout_marginEnd="-12dp"
+                android:layout_toEndOf="@+id/relativeLayout"
+                android:alpha="0.80"
+                android:background="@drawable/corner_transporent_status"
+                android:gravity="center"
+                android:maxWidth="@dimen/space52"
+                android:maxLines="2"
+                android:minLines="2"
+                android:paddingStart="@dimen/space4"
+                android:paddingTop="@dimen/space8"
+                android:paddingEnd="@dimen/space4" />
+
+            <ImageView
+                android:id="@+id/deleteBtn"
+                android:layout_width="@dimen/space72"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/deleteBack"
+                android:layout_alignEnd="@+id/deleteBack"
+                android:layout_alignBottom="@+id/deleteBack"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/delete_image_btn" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

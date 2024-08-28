@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MyTheme" parent="Theme.Material3.Light.NoActionBar">
+<!--        <item name="android:windowBackground">@drawable/anim</item>-->
+        <item name="colorOnSurfaceVariant">#FFFFFF</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="colorIconDark">@color/grayUltraDark</item>
+        <item name="colorPrimaryUltraLight">#F6F9FB</item>
+        <item name="colorPrimaryUltraDark">@color/black</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorTextHeader">@color/black</item>
+        <item name="colorTextHint">@color/grayDark</item>
+        <item name="colorPrimaryLight">@color/colorPrimaryLight</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/pink</item>
+        <item name="colorAccentDark">@color/pinkGray</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+    </style>
+    <style name="header_text_style" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/space8</item>
+        <item name="android:textColor">?colorTextHeader</item>
+    </style>
+    <style name="article_text_style" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/space8</item>
+        <item name="android:textColor">?colorTextHeader</item>
+    </style>
+    <style name="text_16sp_style" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textSize">@dimen/text16</item>
+        <item name="android:padding">@dimen/space4</item>
+        <item name="android:textColor">?colorTextHeader</item>
+    </style>
+    <style name="text_20sp_style" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textSize">@dimen/text20</item>
+        <item name="android:padding">@dimen/space4</item>
+        <item name="android:textColor">?colorTextHeader</item>
+    </style>
+    <style name="text_20sp_on_back_style" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textSize">@dimen/text20</item>
+        <item name="android:padding">@dimen/space4</item>
+        <item name="android:textColor">?colorPrimaryUltraDark</item>
+        <item name="android:background">@drawable/text_back</item>
+    </style>
+
+    <style name="header_text_28sp_on_back_style" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textSize">@dimen/text28</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:padding">@dimen/space4</item>
+        <item name="android:textColor">?colorPrimaryUltraDark</item>
+        <item name="android:background">@drawable/text_back</item>
+    </style>
+    <style name="text_24sp_style" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textSize">@dimen/text24</item>
+        <item name="android:padding">@dimen/space4</item>
+        <item name="android:textColor">?colorTextHeader</item>
+    </style>
+</resources>

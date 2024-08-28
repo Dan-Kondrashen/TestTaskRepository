@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">TestAnimeApp</string>
+    <string name="animeTop">Топ Аниме</string>
+    <string name="name">Название:</string>
+    <string name="status">"Статус: "</string>
+    <string name="description">Описание:</string>
+    <string name="episodesInfo">%1$s(%2$s)</string>
+    <string name="genresTitle">Жанры:</string>
+    <string name="studios">Авторы: </string>
+    <string name="add_to_favorite">Добавить в избранное</string>
+    <string name="favorite">Избранное</string>
+    <string name="seasonText">Сезон выхода:</string>
+    <string name="dateAdding">Дата добавления:</string>
+    <string name="season">%1$s - %2$s год</string>
+    <string name="search">Поиск</string>
+    <string name="notDefinedYet">Пока не определен</string>
+    <string name="searchResult">Результаты поиска</string>
+    <string name="resultText">В результате поиска не найдено подходящих аниме... Попробуйте найти что-нибудь еще!</string>
+    <string name="trailer">Трейлер: </string>
+</resources>

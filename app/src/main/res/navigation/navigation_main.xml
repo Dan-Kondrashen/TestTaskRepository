@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress NavigationFile -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/mainPageFragment">
+
+    <fragment
+        android:id="@+id/searchAnimeInfoFragment"
+        android:name="ru.kondrashen.testanimeapp.presentation.fragments.SearchPageFragment"
+        android:label=""
+        tools:layout="@layout/searchable_fragment_animelist">
+        <argument
+            android:name="storyId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_to_chosenAnimeInfoFragment"
+            app:destination="@id/chosenAnimeInfoFragment" />
+        <action
+            android:id="@+id/action_to_favoriteAnimeFragment"
+            app:destination="@id/favoriteAnimeFragment" />
+        <action
+            android:id="@+id/action_to_mainPageFragment"
+            app:destination="@id/mainPageFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteAnimeFragment"
+        android:name="ru.kondrashen.testanimeapp.presentation.fragments.FavoritesAnimFragment"
+        android:label=""
+        tools:layout="@layout/favorites_list_fragment">
+        <action
+            android:id="@+id/action_to_chosenAnimeInfoFragment"
+            app:destination="@id/chosenAnimeInfoFragment" />
+        <action
+            android:id="@+id/action_to_mainPageFragment"
+            app:destination="@id/mainPageFragment" />
+        <action
+            android:id="@+id/action_to_searchAnimeInfoFragment"
+            app:destination="@id/searchAnimeInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="ru.kondrashen.testanimeapp.presentation.fragments.MainPageFragment"
+        android:label=""
+        tools:layout="@layout/main_fragment_animelist">
+        <action
+            android:id="@+id/action_to_chosenAnimeInfoFragment"
+            app:destination="@id/chosenAnimeInfoFragment" />
+        <action
+            android:id="@+id/action_to_favoriteAnimeFragment"
+            app:destination="@id/favoriteAnimeFragment" />
+        <action
+            android:id="@+id/action_to_searchAnimeInfoFragment"
+            app:destination="@id/searchAnimeInfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chosenAnimeInfoFragment"
+        android:name="ru.kondrashen.testanimeapp.presentation.fragments.AnimeInfoFragment"
+        android:label=""
+        tools:layout="@layout/chosen_anime_info_fragment">
+        <argument
+            android:name="storyId"
+            app:argType="integer" />
+    </fragment>
+</navigation>

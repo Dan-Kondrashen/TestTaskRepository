@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/extra_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/current_card_back"
+        android:gravity="center"
+        android:paddingTop="@dimen/space4"
+        android:paddingBottom="@dimen/space8"
+        android:layout_gravity="bottom|center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/paginationBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:padding="@dimen/space4"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/previous"
+                android:layout_width="@dimen/space40"
+                android:layout_height="@dimen/space40"
+                android:src="@drawable/back_svg" />
+            <TextView
+                android:id="@+id/lastVisiblePrevious"
+                style="@style/text_16sp_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space40"
+                android:gravity="center"
+                android:text="1"/>
+
+            <TextView
+                android:id="@+id/pagePrevious"
+                style="@style/text_16sp_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space40"
+                android:gravity="center"
+                tools:text="4"/>
+
+            <TextView
+                android:id="@+id/pageMiddle"
+                style="@style/text_16sp_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space40"
+                android:gravity="center"
+                tools:text="5"/>
+            <TextView
+                android:id="@+id/pageNext"
+                style="@style/text_16sp_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space40"
+                android:gravity="center"
+                tools:text="6"/>
+            <TextView
+                android:id="@+id/lastVisibleNext"
+                style="@style/text_16sp_style"
+                android:layout_width="wrap_content"
+                android:text="7"
+                android:layout_height="@dimen/space40"
+                android:gravity="center"/>
+
+
+            <TextView
+                android:id="@+id/separator"
+                style="@style/text_16sp_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space40"
+                android:gravity="center"
+                android:text="....."/>
+
+            <TextView
+                android:id="@+id/lastPossiblePage"
+                style="@style/text_16sp_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space40"
+                android:gravity="center"
+                tools:text="500" />
+
+            <ImageView
+                android:id="@+id/next"
+                android:layout_width="@dimen/space40"
+                android:layout_height="@dimen/space40"
+                android:src="@drawable/next_svg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space4">
+
+            <ImageView
+                android:id="@+id/homePage"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/space40"
+                android:layout_weight="1"
+                android:src="@drawable/home_image_btn" />
+
+
+            <ImageView
+                android:id="@+id/searchPage"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/space40"
+                android:layout_weight="1"
+                android:src="@drawable/search_image_btn" />
+
+            <ImageView
+                android:id="@+id/favoritePage"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/space40"
+                android:layout_weight="1"
+                android:src="@drawable/favorite_image_btn" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
