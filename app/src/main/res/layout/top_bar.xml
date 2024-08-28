@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/extra_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/card_back"
+        android:paddingEnd="@dimen/space16"
+        android:paddingStart="@dimen/space16"
+        android:minHeight="@dimen/space72">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_gravity="start"
+            android:gravity="center"
+            android:src="@drawable/logoliliani"
+            android:layout_height="match_parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/homePhone"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/homePage"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/siteLink"/>
+
+        <Button
+            android:id="@+id/menu"
+            android:layout_width="0dp"
+            android:padding="@dimen/space8"
+            style="@style/menu_button_style"
+            android:text="@string/menu"
+            android:layout_weight="0.8"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

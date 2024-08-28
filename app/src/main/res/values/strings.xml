@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FirstTestApp</string>
+    <string name="weightInShelter">Вес в бункере</string>
+    <string name="receiptsNeedPrinted">"Не распечатано чеков: "</string>
+    <string name="kg">КГ</string>
+    <string name="receiptPrinting">Печать чека</string>
+    <string name="remains">Остаток:</string>
+    <string name="unloadedWeight">Выгруженный вес: </string>
+    <string name="loadedWeight">Загруженный вес: </string>
+    <string name="homePhone">8–800–555–126 доб. 123</string>
+    <string name="siteLink">www.liliani.ru</string>
+    <string name="menu">Меню</string>
+    <string name="notImplemented">Пока не реализованно</string>
+    <string name="combine">"Комбайн: "</string>
+    <string name="truck">"Автомобиль: "</string>
+</resources>

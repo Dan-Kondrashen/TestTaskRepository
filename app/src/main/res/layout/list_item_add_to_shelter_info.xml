@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+
+    android:layout_marginTop="@dimen/space4"
+    android:layout_marginStart="2dp"
+    android:layout_marginEnd="2dp"
+    android:background="@drawable/card_back"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/mainInfo"
+        android:layout_width="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/space8"
+        android:minHeight="@dimen/space120"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/space8"
+        android:layout_toStartOf="@id/printer"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/date_view"
+            style="@style/main_text_28sp_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <com.google.android.flexbox.FlexboxLayout
+            app:alignItems="center"
+            android:layout_width="wrap_content"
+            app:flexWrap="wrap"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/transportIcon"
+                android:layout_width="@dimen/space40"
+                android:layout_height="@dimen/space40"/>
+            <TextView
+                android:id="@+id/trackType"
+                style="@style/main_text_28sp_style"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Комбайн:"/>
+            <TextView
+                android:id="@+id/trackName"
+                style="@style/main_text_28sp_style"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainInfo"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/space8"
+        android:layout_marginBottom="@dimen/space16"
+        android:layout_marginEnd="@dimen/space8">
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/weightText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/unloadedWeight"
+                style="@style/main_text_28sp_style"/>
+            <TextView
+                android:id="@+id/weightInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/main_text_28sp_style"/>
+
+        </com.google.android.flexbox.FlexboxLayout>
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/remainsText"
+                style="@style/main_text_28sp_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/remains"/>
+            <TextView
+                android:id="@+id/remainsInfo"
+                style="@style/main_text_28sp_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text=""/>
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/printer"
+        android:layout_width="@dimen/space120"
+        android:padding="@dimen/space8"
+        android:gravity="center"
+        android:layout_height="@dimen/space120"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/space8"
+        android:layout_marginEnd="@dimen/space8"
+        android:src="@drawable/printer"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>

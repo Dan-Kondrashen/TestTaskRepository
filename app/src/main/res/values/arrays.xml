@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="auto_types">
+        <item>Комбайн: </item>
+        <item>Автомобиль: </item>
+    </string-array>
+</resources>

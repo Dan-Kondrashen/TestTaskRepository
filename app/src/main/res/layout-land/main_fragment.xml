@@ -1,0 +1,174 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/top_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/space86"
+        android:paddingBottom="@dimen/space8"
+        android:layout_marginBottom="@dimen/space16"
+        android:paddingEnd="@dimen/space16"
+        android:paddingStart="@dimen/space16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:padding="@dimen/space8"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/print"
+                android:layout_marginBottom="@dimen/space16"
+                android:background="@drawable/card_back"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingStart="@dimen/space28"
+                android:paddingTop="@dimen/space28"
+                android:paddingEnd="@dimen/space28"
+                android:paddingBottom="@dimen/space28">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/space8"
+                    android:text="@string/weightInShelter"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text60"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space16"
+                    android:layout_marginBottom="@dimen/space16"
+                    android:paddingTop="@dimen/space16"
+                    android:paddingBottom="@dimen/space16"
+                    android:background="@drawable/line_up_and_down"
+                    android:gravity="center|bottom"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/weightInShelter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="textMultiLine"
+                        android:maxLength="12"
+                        android:maxLines="2"
+                        android:padding="@dimen/space4"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/text120"
+                        android:textStyle="bold"
+
+                        tools:text="20000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minWidth="@dimen/space120"
+                        android:padding="@dimen/space4"
+                        android:text="@string/kg"
+                        android:textSize="@dimen/text42"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weightInShelter"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text42"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/hint_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weightInShelter"
+                    android:textSize="@dimen/text18" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/print"
+                style="@style/main_button_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:minHeight="@dimen/space120"
+                android:padding="@dimen/space8"
+                android:text="@string/receiptPrinting"
+                android:textSize="@dimen/text42" />
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/scrollBarStyle"
+            android:paddingEnd="@dimen/space60"
+            android:padding="@dimen/space8"
+            android:layout_marginBottom="@dimen/space4"
+            android:layout_height="match_parent">
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/card_back"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/receiptsText"
+                        android:layout_toStartOf="@id/receiptsNumber"
+                        android:layout_alignParentStart="true"
+                        android:textSize="@dimen/text18"
+                        android:textAlignment="textStart"
+                        android:padding="@dimen/space16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="@dimen/space100"
+                        style="@style/main_text_style"
+                        android:text="@string/receiptsNeedPrinted"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_alignStart="@id/receiptsNumber"
+                        android:id="@+id/receiptsNumber"
+                        android:layout_alignParentEnd="true"
+                        android:padding="@dimen/space16"
+                        android:maxWidth="@dimen/space200"
+                        android:textSize="@dimen/text18"
+                        android:textStyle="bold"
+                        android:gravity="end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/main_text_bold_style"
+                        tools:text="300 шт."/>
+                </RelativeLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/operationRecycle"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/space8"
+                    tools:listitem="@layout/list_item_add_to_shelter_info"
+                    android:layout_marginBottom="@dimen/space4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
