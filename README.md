@@ -6,9 +6,9 @@
 (https://www.figma.com/design/d41FOBRzzPsrmIYWvcl53H/Untitled?
 node-id=0-1&t=PAhfUwd0B4EE95M6-1)</p>
 
-<h3>Реализованные требования: </h3>
+<h3><b>Реализованные требования: </b></h3>
 
-<p>
+
   1) XML
   2) Single Activity
   3) Fragment Manager
@@ -17,7 +17,7 @@ node-id=0-1&t=PAhfUwd0B4EE95M6-1)</p>
   6) Full Screen
   7) Density: mdpi
   8) Resolution: 1280 x 800
-</p>
+
 
 
 
