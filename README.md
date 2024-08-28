@@ -1,18 +1,21 @@
 # Тестовое задание №2 на позицию Android разработчик (junior)
 
 <h3>Задача:</h3>
-<p>Разработать дизайн приложение, ссылка на
-дизайн
-(https://www.figma.com/design/d41FOBRzzPsrmIYWvcl53H/Untitled?
-node-id=0-1&t=PAhfUwd0B4EE95M6-1)</p>
+<p>Разработать приложение Справочник аниме для просмотра
+информации об аниме используя API jikan.moe</p>
 
 <h3><b>Реализованные требования: </b></h3>
 
-1) XML
-2) Single Activity
-3) Fragment Manager
-4) Orientation: landscape
-5) Min API level: 24
-6) Full Screen
-7) Density: mdpi
-8) Resolution: 1280 x 800
+1) ООП
+2) SOLID
+3) Kotlin
+4) MVVM
+5) Single Activity
+6) LiveData
+7) Coroutines
+8) Retrofit2
+9) Xml представления
+10) Представления и дизайн в соответствии с Google Material design
+11) Room БД
+12) Service Locator (DI пока тяжеловато, нужно чуть больше времени)
+
