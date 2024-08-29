@@ -2,13 +2,17 @@ package ru.kondrashen.testanimeapp.domain.domainBase
 
 import android.app.Application
 import ru.kondrashen.testanimeapp.domain.repositories.AnimeRepository
+import ru.kondrashen.testanimeapp.domain.repositories.FavoriteRepository
 import ru.kondrashen.testanimeapp.domain.repositories.GenreRepository
+import ru.kondrashen.testanimeapp.domain.repositories.StudioRepository
 import ru.kondrashen.testanimeapp.repository.db.AnimeInfoDB
 
 object RepositoryLocator {
     private lateinit var database: AnimeInfoDB
     private lateinit var animeRepository: AnimeRepository
     private lateinit var genreRepository: GenreRepository
+    private lateinit var studioRepository: StudioRepository
+    private lateinit var favoriteRepository: FavoriteRepository
 
     fun init(application: Application) {
         database = AnimeInfoDB.getDatabase(application)
@@ -19,6 +23,7 @@ object RepositoryLocator {
         val animeVirtualDao = database.animeVirtualDao()
         val operationTypeDao = database.operationTypeDao()
         val pageDao = database.animeToPageDao()
+        val favoriteDao = database.favoriteDao()
 
         animeRepository = AnimeRepository(
             animeDao, genreDao,
@@ -26,6 +31,8 @@ object RepositoryLocator {
             pageDao, operationTypeDao
         )
         genreRepository = GenreRepository(genreDao)
+        favoriteRepository = FavoriteRepository(animeDao, favoriteDao)
+        studioRepository = StudioRepository(studiosDao)
     }
 
     fun provideAnimeRepository(): AnimeRepository {
@@ -34,5 +41,13 @@ object RepositoryLocator {
 
     fun provideGenreRepository(): GenreRepository {
         return genreRepository
+    }
+
+    fun provideFavoriteRepository(): FavoriteRepository {
+        return favoriteRepository
+    }
+
+    fun provideStudiosRepository(): StudioRepository {
+        return studioRepository
     }
 }
