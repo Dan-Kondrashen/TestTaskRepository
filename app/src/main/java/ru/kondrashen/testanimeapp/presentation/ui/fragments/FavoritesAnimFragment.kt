@@ -14,7 +14,8 @@ import ru.kondrashen.testanimeapp.databinding.FavoritesListFragmentBinding
 import ru.kondrashen.testanimeapp.presentation.viewmodels.ExtraInfoViewModel
 import ru.kondrashen.testanimeapp.presentation.viewmodels.MainInfoViewModel
 import ru.kondrashen.testanimeapp.presentation.ui.adapters.MainAnimeAdapter
-import ru.kondrashen.testanimeapp.domain.usecase.BottomNavigationBase
+import ru.kondrashen.testanimeapp.domain.usecase.navigation.BottomNavigationBase
+import ru.kondrashen.testanimeapp.domain.usecase.navigation.SetPaginationNavigation
 import kotlin.math.absoluteValue
 import kotlin.math.sign
 
@@ -48,7 +49,7 @@ class FavoritesAnimFragment: Fragment() {
         extraModel.countFavorite().observe(viewLifecycleOwner){ count ->
             count?.let { countLoc ->
                 var maxItems = countLoc.calculatePage(25)
-                BottomNavigationBase.setPaginationNavigation(
+                SetPaginationNavigation().setPaginationNavigation(
                     binding.navBar,
                     1,
                     maxItems,
@@ -78,7 +79,7 @@ class FavoritesAnimFragment: Fragment() {
             this.index = view.text.toString().toInt()
             extraModel.getFavoriteAnimeFromRoom(index)
             dataModel.setMainPageAnime(index)
-            BottomNavigationBase.setPaginationNavigation(
+            SetPaginationNavigation().setPaginationNavigation(
                 binding.navBar,
                 index,
                 maxPages,

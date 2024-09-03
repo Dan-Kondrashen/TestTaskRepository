@@ -29,7 +29,7 @@ import ru.kondrashen.testanimeapp.R
 import ru.kondrashen.testanimeapp.databinding.SearchableFragmentAnimelistBinding
 import ru.kondrashen.testanimeapp.presentation.viewmodels.MainInfoViewModel
 import ru.kondrashen.testanimeapp.presentation.ui.adapters.MainAnimeAdapter
-import ru.kondrashen.testanimeapp.domain.usecase.BottomNavigationBase
+import ru.kondrashen.testanimeapp.domain.usecase.navigation.BottomNavigationBase
 import ru.kondrashen.testanimeapp.presentation.base.PublicConstants
 
 class SearchPageFragment: Fragment() {

@@ -15,14 +15,13 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/animeList"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="@dimen/space100"
         android:orientation="vertical"
         android:paddingStart="@dimen/space4"
         android:paddingTop="@dimen/space4"
         android:paddingEnd="@dimen/space4"
-
         app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

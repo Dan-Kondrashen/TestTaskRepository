@@ -9,13 +9,16 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexboxLayoutManager
+import com.google.android.flexbox.JustifyContent
 import ru.kondrashen.testanimeapp.databinding.MainFragmentAnimelistBinding
-import ru.kondrashen.testanimeapp.presentation.viewmodels.MainInfoViewModel
+import ru.kondrashen.testanimeapp.domain.usecase.navigation.BottomNavigationBase
+import ru.kondrashen.testanimeapp.domain.usecase.navigation.BottomNavigationBase.setPageViewsDesign
+import ru.kondrashen.testanimeapp.domain.usecase.navigation.SetPaginationNavigation
 import ru.kondrashen.testanimeapp.presentation.ui.adapters.MainAnimeAdapter
-import ru.kondrashen.testanimeapp.domain.usecase.BottomNavigationBase
-import ru.kondrashen.testanimeapp.domain.usecase.BottomNavigationBase.setPageViewsDesign
-import ru.kondrashen.testanimeapp.domain.usecase.BottomNavigationBase.setPaginationNavigation
+import ru.kondrashen.testanimeapp.presentation.viewmodels.MainInfoViewModel
+
 
 class MainPageFragment: Fragment() {
     private var _binding: MainFragmentAnimelistBinding? = null
@@ -34,7 +37,8 @@ class MainPageFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = MainFragmentAnimelistBinding.inflate(inflater, container, false)
-        binding.animeList.layoutManager = FlexboxLayoutManager(requireContext())
+        val layoutManager = FlexboxLayoutManager(this.context)
+        binding.animeList.layoutManager = layoutManager
         return binding.root
     }
 
@@ -54,7 +58,7 @@ class MainPageFragment: Fragment() {
     private fun getInfoFromServ(index: Int){
         dataModel.getAnimeMainInfo(index).observe(viewLifecycleOwner){ resp ->
             resp.maxPage?.also { maxPages = it }
-            setPaginationNavigation(binding.navBar, resp.curPage?: 1, resp.maxPage, onTextViewClickUpdate())
+            SetPaginationNavigation().setPaginationNavigation(binding.navBar, resp.curPage?: 1, resp.maxPage, onTextViewClickUpdate())
             setPageViewsDesign(binding.navBar, resp.curPage?: 1, resp.maxPage)
             if (resp.status == "success"){
                 dataModel.setMainPageAnime(index)
@@ -72,7 +76,7 @@ class MainPageFragment: Fragment() {
             this.index = view.text.toString().toInt()
             getInfoFromServ(index)
             dataModel.setMainPageAnime(index)
-            setPaginationNavigation(binding.navBar, index, maxPages, onTextViewClickUpdate())
+            SetPaginationNavigation().setPaginationNavigation(binding.navBar, index, maxPages, onTextViewClickUpdate())
             setPageViewsDesign(binding.navBar,index, maxPages)
         }
 
