@@ -15,8 +15,6 @@ object ImageFactory {
             Glide.with(view)
                 .asDrawable()
                 .load(url)
-//                .dontAnimate()
-//                .placeholder(userAvatar.drawable)
                 .error(Glide.with(view).load(R.drawable.anim))
                 .into(previewImage)
         }

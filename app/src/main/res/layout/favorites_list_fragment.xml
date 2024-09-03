@@ -15,7 +15,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/animeList"
-        android:layout_width="match_parent"
+
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginBottom="@dimen/space100"
         android:orientation="vertical"
@@ -24,12 +25,12 @@
         android:paddingEnd="@dimen/space4"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/navBar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toBottomOf="@+id/mainTitle"
         app:spanCount="2"
-        tools:listitem="@layout/list_item_anime" />
+        tools:listitem="@layout/list_item_anime_expended" />
     <include
         android:id="@+id/navBar"
         layout="@layout/bottom_nav_bar_with_pagination"/>
