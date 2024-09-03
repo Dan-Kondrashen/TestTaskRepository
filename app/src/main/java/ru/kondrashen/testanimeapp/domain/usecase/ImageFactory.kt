@@ -8,7 +8,7 @@ import ru.kondrashen.testanimeapp.R
 
 object ImageFactory {
     fun setPreview(view: View, url: String, context: Context){
-        if (CatchException.hasInternetCheck(context)) {
+        if (CatchInternetException.hasInternetCheck(context)) {
             val previewImage = view.findViewById<ImageView>(R.id.preview)
             Glide.with(view)
                 .asDrawable()
@@ -18,7 +18,7 @@ object ImageFactory {
         }
     }
     fun setAnimPoster(view: View, url: String, context: Context){
-        if (CatchException.hasInternetCheck(context)) {
+        if (CatchInternetException.hasInternetCheck(context)) {
             val poster = view.findViewById<ImageView>(R.id.poster)
             Glide.with(view)
                 .asDrawable()

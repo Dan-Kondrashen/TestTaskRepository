@@ -4,7 +4,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 
-object CatchException {
+object CatchInternetException {
     fun hasInternetCheck(context: Context): Boolean{
         val result: Boolean
         val connectivityManager =

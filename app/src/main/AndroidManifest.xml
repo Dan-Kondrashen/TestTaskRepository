@@ -7,7 +7,7 @@
 
 
     <application
-        android:name=".domain.domainBase.ApplicationBase"
+        android:name=".di.ApplicationBase"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -18,7 +18,7 @@
         android:theme="@style/Theme.MyTheme"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.activitys.MainActivity"
+            android:name=".presentation.ui.activitys.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

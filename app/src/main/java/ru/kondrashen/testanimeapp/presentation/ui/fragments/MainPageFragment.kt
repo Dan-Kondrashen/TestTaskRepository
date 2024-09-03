@@ -1,4 +1,4 @@
-package ru.kondrashen.testanimeapp.presentation.fragments
+package ru.kondrashen.testanimeapp.presentation.ui.fragments
 
 import android.app.Activity
 import android.os.Bundle
@@ -12,7 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.flexbox.FlexboxLayoutManager
 import ru.kondrashen.testanimeapp.databinding.MainFragmentAnimelistBinding
 import ru.kondrashen.testanimeapp.presentation.viewmodels.MainInfoViewModel
-import ru.kondrashen.testanimeapp.presentation.adapters.MainAnimeAdapter
+import ru.kondrashen.testanimeapp.presentation.ui.adapters.MainAnimeAdapter
 import ru.kondrashen.testanimeapp.domain.usecase.BottomNavigationBase
 import ru.kondrashen.testanimeapp.domain.usecase.BottomNavigationBase.setPageViewsDesign
 import ru.kondrashen.testanimeapp.domain.usecase.BottomNavigationBase.setPaginationNavigation

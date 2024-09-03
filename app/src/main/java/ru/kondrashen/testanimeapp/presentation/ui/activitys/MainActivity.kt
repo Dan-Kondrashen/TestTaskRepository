@@ -1,4 +1,4 @@
-package ru.kondrashen.testanimeapp.presentation.activitys
+package ru.kondrashen.testanimeapp.presentation.ui.activitys
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity

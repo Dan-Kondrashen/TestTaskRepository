@@ -3,7 +3,7 @@ package ru.kondrashen.testanimeapp.presentation.viewmodels
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import ru.kondrashen.testanimeapp.domain.domainBase.RepositoryLocator
+import ru.kondrashen.testanimeapp.di.RepositoryLocator
 import ru.kondrashen.testanimeapp.repository.repositories.AnimeRepository
 import ru.kondrashen.testanimeapp.repository.repositories.FavoriteRepository
 import ru.kondrashen.testanimeapp.repository.repositories.GenreRepository

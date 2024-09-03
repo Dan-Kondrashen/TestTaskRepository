@@ -1,4 +1,4 @@
-package ru.kondrashen.testanimeapp.presentation.adapters
+package ru.kondrashen.testanimeapp.presentation.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

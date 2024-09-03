@@ -1,4 +1,4 @@
-package ru.kondrashen.testanimeapp.domain.domainBase
+package ru.kondrashen.testanimeapp.di
 
 import android.app.Application
 import ru.kondrashen.testanimeapp.repository.repositories.AnimeRepository

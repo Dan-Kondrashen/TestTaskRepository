@@ -8,7 +8,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import ru.kondrashen.testanimeapp.domain.domainBase.RepositoryLocator
+import ru.kondrashen.testanimeapp.di.RepositoryLocator
 import ru.kondrashen.testanimeapp.repository.repositories.AnimeRepository
 import ru.kondrashen.testanimeapp.repository.repositories.GenreRepository
 import ru.kondrashen.testanimeapp.domain.data_class.info_classes.AnimeFullInfo

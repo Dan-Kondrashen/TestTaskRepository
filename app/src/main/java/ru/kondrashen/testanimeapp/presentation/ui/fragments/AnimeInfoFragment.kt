@@ -1,4 +1,4 @@
-package ru.kondrashen.testanimeapp.presentation.fragments
+package ru.kondrashen.testanimeapp.presentation.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,7 +13,7 @@ import ru.kondrashen.testanimeapp.R
 import ru.kondrashen.testanimeapp.databinding.ChosenAnimeInfoFragmentBinding
 import ru.kondrashen.testanimeapp.presentation.viewmodels.ExtraInfoViewModel
 import ru.kondrashen.testanimeapp.presentation.viewmodels.MainInfoViewModel
-import ru.kondrashen.testanimeapp.presentation.adapters.LinearItemsAdapter
+import ru.kondrashen.testanimeapp.presentation.ui.adapters.LinearItemsAdapter
 import ru.kondrashen.testanimeapp.domain.usecase.ImageFactory
 import ru.kondrashen.testanimeapp.presentation.base.PublicConstants
 

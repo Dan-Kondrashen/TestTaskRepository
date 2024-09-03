@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/searchAnimeInfoFragment"
-        android:name="ru.kondrashen.testanimeapp.presentation.fragments.SearchPageFragment"
+        android:name="ru.kondrashen.testanimeapp.presentation.ui.fragments.SearchPageFragment"
         android:label=""
         tools:layout="@layout/searchable_fragment_animelist">
         <argument
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/favoriteAnimeFragment"
-        android:name="ru.kondrashen.testanimeapp.presentation.fragments.FavoritesAnimFragment"
+        android:name="ru.kondrashen.testanimeapp.presentation.ui.fragments.FavoritesAnimFragment"
         android:label=""
         tools:layout="@layout/favorites_list_fragment">
         <action
@@ -42,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainPageFragment"
-        android:name="ru.kondrashen.testanimeapp.presentation.fragments.MainPageFragment"
+        android:name="ru.kondrashen.testanimeapp.presentation.ui.fragments.MainPageFragment"
         android:label=""
         tools:layout="@layout/main_fragment_animelist">
         <action
@@ -58,7 +58,7 @@
 
     <fragment
         android:id="@+id/chosenAnimeInfoFragment"
-        android:name="ru.kondrashen.testanimeapp.presentation.fragments.AnimeInfoFragment"
+        android:name="ru.kondrashen.testanimeapp.presentation.ui.fragments.AnimeInfoFragment"
         android:label=""
         tools:layout="@layout/chosen_anime_info_fragment">
         <argument

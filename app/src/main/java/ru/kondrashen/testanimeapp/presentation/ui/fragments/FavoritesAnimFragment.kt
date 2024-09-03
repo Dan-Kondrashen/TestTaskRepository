@@ -1,4 +1,4 @@
-package ru.kondrashen.testanimeapp.presentation.fragments
+package ru.kondrashen.testanimeapp.presentation.ui.fragments
 
 import android.app.Activity
 import android.os.Bundle
@@ -13,7 +13,7 @@ import androidx.navigation.fragment.findNavController
 import ru.kondrashen.testanimeapp.databinding.FavoritesListFragmentBinding
 import ru.kondrashen.testanimeapp.presentation.viewmodels.ExtraInfoViewModel
 import ru.kondrashen.testanimeapp.presentation.viewmodels.MainInfoViewModel
-import ru.kondrashen.testanimeapp.presentation.adapters.MainAnimeAdapter
+import ru.kondrashen.testanimeapp.presentation.ui.adapters.MainAnimeAdapter
 import ru.kondrashen.testanimeapp.domain.usecase.BottomNavigationBase
 import kotlin.math.absoluteValue
 import kotlin.math.sign
