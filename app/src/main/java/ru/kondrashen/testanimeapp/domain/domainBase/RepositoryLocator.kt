@@ -1,10 +1,10 @@
 package ru.kondrashen.testanimeapp.domain.domainBase
 
 import android.app.Application
-import ru.kondrashen.testanimeapp.domain.repositories.AnimeRepository
-import ru.kondrashen.testanimeapp.domain.repositories.FavoriteRepository
-import ru.kondrashen.testanimeapp.domain.repositories.GenreRepository
-import ru.kondrashen.testanimeapp.domain.repositories.StudioRepository
+import ru.kondrashen.testanimeapp.repository.repositories.AnimeRepository
+import ru.kondrashen.testanimeapp.repository.repositories.FavoriteRepository
+import ru.kondrashen.testanimeapp.repository.repositories.GenreRepository
+import ru.kondrashen.testanimeapp.repository.repositories.StudioRepository
 import ru.kondrashen.testanimeapp.repository.db.AnimeInfoDB
 
 object RepositoryLocator {

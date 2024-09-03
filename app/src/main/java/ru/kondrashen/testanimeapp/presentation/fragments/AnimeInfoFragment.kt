@@ -1,24 +1,20 @@
 package ru.kondrashen.testanimeapp.presentation.fragments
 
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
 import android.view.ViewGroup
 import android.webkit.WebChromeClient
-import android.webkit.WebView
-import android.widget.MediaController
-import android.widget.VideoView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.flexbox.FlexboxLayoutManager
 import ru.kondrashen.testanimeapp.R
 import ru.kondrashen.testanimeapp.databinding.ChosenAnimeInfoFragmentBinding
-import ru.kondrashen.testanimeapp.domain.viewmodels.ExtraInfoViewModel
-import ru.kondrashen.testanimeapp.domain.viewmodels.MainInfoViewModel
+import ru.kondrashen.testanimeapp.presentation.viewmodels.ExtraInfoViewModel
+import ru.kondrashen.testanimeapp.presentation.viewmodels.MainInfoViewModel
 import ru.kondrashen.testanimeapp.presentation.adapters.LinearItemsAdapter
-import ru.kondrashen.testanimeapp.presentation.base.ImageFactory
+import ru.kondrashen.testanimeapp.domain.usecase.ImageFactory
 import ru.kondrashen.testanimeapp.presentation.base.PublicConstants
 
 class AnimeInfoFragment: Fragment() {

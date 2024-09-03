@@ -13,8 +13,8 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import ru.kondrashen.testanimeapp.R
 import ru.kondrashen.testanimeapp.databinding.ActivityMainBinding
-import ru.kondrashen.testanimeapp.domain.viewmodels.ExtraInfoViewModel
-import ru.kondrashen.testanimeapp.domain.viewmodels.MainInfoViewModel
+import ru.kondrashen.testanimeapp.presentation.viewmodels.ExtraInfoViewModel
+import ru.kondrashen.testanimeapp.presentation.viewmodels.MainInfoViewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
