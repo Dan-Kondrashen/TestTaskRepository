@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import ru.kondrashen.testanimeapp.databinding.ListItemGenreBinding
-import ru.kondrashen.testanimeapp.repository.data_class.SimpleNameInterface
+import ru.kondrashen.testanimeapp.domain.data_class.SimpleNameInterface
 
 class LinearItemsAdapter(infoList: List<SimpleNameInterface>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private var genres: List<SimpleNameInterface>

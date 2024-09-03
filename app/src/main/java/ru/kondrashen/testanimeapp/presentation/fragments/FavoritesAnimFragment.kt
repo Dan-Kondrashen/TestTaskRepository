@@ -10,13 +10,11 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.google.android.flexbox.FlexboxLayoutManager
 import ru.kondrashen.testanimeapp.databinding.FavoritesListFragmentBinding
-import ru.kondrashen.testanimeapp.databinding.MainFragmentAnimelistBinding
-import ru.kondrashen.testanimeapp.domain.viewmodels.ExtraInfoViewModel
-import ru.kondrashen.testanimeapp.domain.viewmodels.MainInfoViewModel
+import ru.kondrashen.testanimeapp.presentation.viewmodels.ExtraInfoViewModel
+import ru.kondrashen.testanimeapp.presentation.viewmodels.MainInfoViewModel
 import ru.kondrashen.testanimeapp.presentation.adapters.MainAnimeAdapter
-import ru.kondrashen.testanimeapp.presentation.base.BottomNavigationBase
+import ru.kondrashen.testanimeapp.domain.usecase.BottomNavigationBase
 import kotlin.math.absoluteValue
 import kotlin.math.sign
 

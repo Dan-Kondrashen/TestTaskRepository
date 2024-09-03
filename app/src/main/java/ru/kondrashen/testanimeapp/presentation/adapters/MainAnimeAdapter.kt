@@ -13,11 +13,11 @@ import androidx.viewbinding.ViewBinding
 import ru.kondrashen.testanimeapp.R
 import ru.kondrashen.testanimeapp.databinding.ListItemAnimeBinding
 import ru.kondrashen.testanimeapp.databinding.ListItemAnimeExpendedBinding
-import ru.kondrashen.testanimeapp.domain.viewmodels.MainInfoViewModel
-import ru.kondrashen.testanimeapp.presentation.base.ImageFactory
+import ru.kondrashen.testanimeapp.presentation.viewmodels.MainInfoViewModel
+import ru.kondrashen.testanimeapp.domain.usecase.ImageFactory
 import ru.kondrashen.testanimeapp.presentation.base.PublicConstants
-import ru.kondrashen.testanimeapp.repository.data_class.info_classes.AnimeBase
-import ru.kondrashen.testanimeapp.repository.data_class.info_classes.AnimeFullInfo
+import ru.kondrashen.testanimeapp.domain.data_class.info_classes.AnimeBase
+import ru.kondrashen.testanimeapp.domain.data_class.info_classes.AnimeFullInfo
 import java.util.Locale
 
 class MainAnimeAdapter(infoList: MutableList<AnimeBase>, private var activity: Activity, private var navigation: NavController, private var isExpendedFavorite: Boolean): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -90,7 +90,8 @@ class MainAnimeAdapter(infoList: MutableList<AnimeBase>, private var activity: A
                     R.string.notDefinedYet
                 )
                 bind.deleteBtn.setOnClickListener{
-                    var dataModel = ViewModelProvider(activity as AppCompatActivity).get(MainInfoViewModel::class.java)
+                    var dataModel = ViewModelProvider(activity as AppCompatActivity).get(
+                        MainInfoViewModel::class.java)
                     dataModel.deleteAnimeFromFavoriteRoom(animeInfo.anime.id)
                     val removedItemIndex = adapterPosition
                     anime.removeAt(removedItemIndex)

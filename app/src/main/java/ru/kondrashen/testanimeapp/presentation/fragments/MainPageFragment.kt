@@ -4,24 +4,18 @@ import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.GONE
-import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.core.view.children
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.google.android.flexbox.FlexboxLayoutManager
-import ru.kondrashen.testanimeapp.R
-import ru.kondrashen.testanimeapp.databinding.BottomNavBarWithPaginationBinding
 import ru.kondrashen.testanimeapp.databinding.MainFragmentAnimelistBinding
-import ru.kondrashen.testanimeapp.domain.viewmodels.MainInfoViewModel
+import ru.kondrashen.testanimeapp.presentation.viewmodels.MainInfoViewModel
 import ru.kondrashen.testanimeapp.presentation.adapters.MainAnimeAdapter
-import ru.kondrashen.testanimeapp.presentation.base.BottomNavigationBase
-import ru.kondrashen.testanimeapp.presentation.base.BottomNavigationBase.setPageViewsDesign
-import ru.kondrashen.testanimeapp.presentation.base.BottomNavigationBase.setPaginationNavigation
+import ru.kondrashen.testanimeapp.domain.usecase.BottomNavigationBase
+import ru.kondrashen.testanimeapp.domain.usecase.BottomNavigationBase.setPageViewsDesign
+import ru.kondrashen.testanimeapp.domain.usecase.BottomNavigationBase.setPaginationNavigation
 
 class MainPageFragment: Fragment() {
     private var _binding: MainFragmentAnimelistBinding? = null
